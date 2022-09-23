@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slot Machine</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Play Slot!</h1>
+        <hr class="my-4" />
+        <h2>Hit lever button to start</h2>
+      </div>
+    </div>
+    <div class="center-lever">
+      <button type="button" class="lever" onclick="spin()">Lever</button>
+    </div>
+
+    <!-- This is a table with a single row  The three columns will represent the numbers in the slot machine -->
+
+    <table class="center">
+      <tbody>
+        <tr>
+          <td>
+            <span id="item1" class="slot-number">-</span>
+          </td>
+          <td>
+            <span id="item2" class="slot-number">-</span>
+          </td>
+          <td>
+            <span id="item3" class="slot-number">-</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- This div will represent a message that appears when all three numbers match-->
+
+    <div id="message" class="center message">You Won!</div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
