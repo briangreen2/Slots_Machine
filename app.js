@@ -24,17 +24,21 @@ function spin() {
   item1.innerHTML = `${num1}`;
   item2.innerHTML = `${num2}`;
   item3.innerHTML = `${num3}`;
+
+  if (num1 === num2 && num1 === num3) {
+    showMessage();
+  } else {
+    hideMessage();
+  }
 }
 
 // The two functions below will either show or hide the message depending on if the user wins or lose
-
 function showMessage() {
-  const msg = document.getElementById('message');
+  const msg = document.getElementById('win');
   msg.style.display = 'block';
-  msg.classList.add('animated', 'pulse');
 }
 
 function hideMessage() {
-  const msg = document.getElementById('message');
+  const msg = document.getElementById('win');
   msg.style.display = 'none';
 }
